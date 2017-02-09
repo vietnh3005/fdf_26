@@ -20,17 +20,39 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  base_title: "Welcome to Framfood"
-  home: "Home"
-  login: "Login"
-  welcome: "Welcome to Framgia"
-  short_des: "This is homepage of Framfood"
-  logo: "Logo"
-  contact: "Contact"
-  about: "About"
-  source_des: "Website by"
-  framgia: "Framgia"
-  dates:
-    formats:
-      date_month_year: "%d-%m-%y"
   main_food: "food.jpg"
+  base_title: "Welcome to Framfood"
+  home_title: "Home"
+
+  layouts:
+    admin_header:
+      admin_logo: "Admin Manage"
+      admin: "Admin"
+      profile: "Profile"
+      setting: "Settings"
+      logout: "Logout"
+
+    footer:
+      source_des: "Website by"
+      framgia: "Framgia"
+      contact: "Contact"
+      about: "About"
+      dates:
+      formats:
+        date_month_year: "%d-%m-%y"
+
+    header:
+      login: "Login"
+      logo: "Logo"
+
+    leftbar:
+      dashboard: "Dashboard"
+      manage_users: "Manage Users"
+      manage_products: "Manage Products"
+      manage_categories: "Manage Categories"
+      manage_orders: "Manage Orders"
+
+  pages:
+    home:
+      welcome: "Welcome to Framgia"
+      short_des: "This is homepage"
