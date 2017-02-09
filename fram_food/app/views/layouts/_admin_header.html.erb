@@ -1,0 +1,28 @@
+<header class="navbar navbar-fixed-top navbar-inverse ">
+  <div class="container">
+    <%= link_to t("admin_logo"), root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to root_path do %>
+            <span class="glyphicon glyphicon-home"></span>
+            <%= t "home_title" %>
+          <% end %>
+        </li>
+        <li class="dropdown">
+          <%= link_to "#", class: "dropdown-toggle",
+            data: {toggle: "dropdown"} do %>
+            <span class="glyphicon glyphicon-user"></span>
+            <b class="caret"></b>
+            <%= t "admin" %>
+          <% end %>
+          <ul class="dropdown-menu">
+            <li><%= link_to t("profile"), "#" %></li>
+            <li><%= link_to t("settings"), "#" %></li>
+            <li><%= link_to t("logout"), "#" %></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

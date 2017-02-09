@@ -3,8 +3,18 @@
     <%= link_to t("logo"), root_path, id: "logo" %>
       <nav>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t("home"), root_path %></li>
-          <li><%= link_to t("login"), "#" %></li>
+          <li>
+            <%= link_to root_path do %>
+              <span class="glyphicon glyphicon-home"></span>
+              <%= t "home_title" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to root_path do %>
+              <span class="glyphicon glyphicon-log-in"></span>
+              <%= t".login" %>
+            <% end %>
+          </li>
         </ul>
     </nav>
   </div>
