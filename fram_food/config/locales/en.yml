@@ -44,6 +44,10 @@ en:
     header:
       login: "Login"
       logo: "Logo"
+      logout: "Logout"
+      setting: "Settings"
+      profile: "Profile"
+      account: "Account"
 
     leftbar:
       dashboard: "Dashboard"
@@ -56,6 +60,13 @@ en:
     home:
       welcome: "Welcome to Framgia"
       short_des: "This is homepage"
+
+  sessions:
+    new:
+      login: "Login"
+      remember: "Remember me on this computer"
+      signup_now: "Sign up now!"
+      new_user: "New user?"
 
   shared:
     error_messages:
@@ -72,3 +83,6 @@ en:
     users:
       welcome: "Welcome to the Sample App!"
       not_found: "Don't have user"
+
+    sessions:
+      invalid: "Invalid email/password combination"
