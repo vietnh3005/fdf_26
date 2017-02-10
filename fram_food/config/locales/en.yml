@@ -56,3 +56,19 @@ en:
     home:
       welcome: "Welcome to Framgia"
       short_des: "This is homepage"
+
+  shared:
+    error_messages:
+      contain: "The form contains"
+      error: "error"
+
+  users:
+    new:
+      signup: "Sign up"
+      create: "Create my account"
+      confir: "Confirmation"
+
+  controllers:
+    users:
+      welcome: "Welcome to the Sample App!"
+      not_found: "Don't have user"
