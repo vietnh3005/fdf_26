@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208053324) do
+ActiveRecord::Schema.define(version: 20170210022121) do
 
   create_table "bank_accounts", force: :cascade do |t|
     t.string   "serial"
@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(version: 20170208053324) do
     t.string   "phone"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.string   "remember_digest"
   end
 
 end
