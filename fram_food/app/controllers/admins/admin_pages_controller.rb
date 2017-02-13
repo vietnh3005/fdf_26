@@ -1,8 +1,8 @@
-class ManagePagesController < ApplicationController
+class Admins::AdminPagesController < ApplicationController
   layout "admin_layout"
   def show
     if valid_page?
-      render template: "manage_pages/#{params[:page]}"
+      render template: "admins/admin_pages/#{params[:page]}"
     else
       render file: "public/404.html", status: :not_found
     end
@@ -11,6 +11,6 @@ class ManagePagesController < ApplicationController
   private
   def valid_page?
     File.exist? Pathname.new Rails.root +
-      "app/views/manage_pages/#{params[:page]}.html.erb"
+      "app/views/admins/admin_pages/#{params[:page]}.html.erb"
   end
 end

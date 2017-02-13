@@ -23,6 +23,10 @@ en:
   main_food: "food.jpg"
   base_title: "Welcome to Framfood"
   home_title: "Home"
+  contain: "The form contains"
+  error: "error"
+  please_log_in: "Please login"
+  user_not_admin: "User not admin"
 
   layouts:
     admin_header:
@@ -38,7 +42,7 @@ en:
       contact: "Contact"
       about: "About"
       dates:
-      formats:
+        formats:
         date_month_year: "%d-%m-%y"
 
     header:
@@ -68,11 +72,6 @@ en:
       signup_now: "Sign up now!"
       new_user: "New user?"
 
-  shared:
-    error_messages:
-      contain: "The form contains"
-      error: "error"
-
   users:
     new:
       signup: "Sign up"
@@ -86,3 +85,15 @@ en:
 
     sessions:
       invalid: "Invalid email/password combination"
+
+  admins:
+    categories:
+      add_success: "Insert sucessfully"
+      index:
+        add: "Add"
+        category_add: "Adding Category"
+        category: "Category"
+        cat_list: "Categories List"
+        new_cat: "New Category"
+        add_new_title: "Adding a new category"
+        create_cat: "Create Category"

@@ -1,0 +1,15 @@
+<% provide :title, t(".category") %>
+<h2><%= t "category" %></h2>
+<div class="col-md-4">
+  <div>
+    <%= form_for [:admins, @category],remote: true do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.submit t(".create_cat"), class: "btn btn-primary" %>
+    <% end %>
+    <%= render "shared/error_messages", target: @category %>
+  </div>
+</div>
+<div class="col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0 categories">
+  <%= render @categories %>
+</div>

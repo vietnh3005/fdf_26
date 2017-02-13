@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20170210022121) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
-    t.string   "addres"
+    t.string   "address"
     t.boolean  "is_admin",        default: false
     t.string   "phone"
     t.datetime "created_at",                      null: false
