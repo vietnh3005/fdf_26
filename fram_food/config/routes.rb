@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   resources :users, only: [:create, :show]
+  resources :products do
+    resources :comments, only: :create
+  end
 
   namespace :admins do
     get "/admin_pages/*page", to: "admin_pages#show"

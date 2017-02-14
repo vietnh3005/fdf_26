@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  comment: "Comment"
   main_food: "food.jpg"
   base_title: "Welcome to Framfood"
   home_title: "Home"

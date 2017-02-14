@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170210022121) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_comments_on_product_id"
+    t.index ["user_id", "product_id", "created_at"], name: "index_comments_on_user_id_and_product_id_and_created_at"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
