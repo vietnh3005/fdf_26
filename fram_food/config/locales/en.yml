@@ -89,6 +89,11 @@ en:
   admins:
     categories:
       add_success: "Insert sucessfully"
+      not_found: "Category not found"
+      del_success: "Delete succesfully"
+      update_success: "Update successfully"
+      update_fail: "Update fail,try again"
+
       index:
         add: "Add"
         category_add: "Adding Category"
@@ -97,3 +102,11 @@ en:
         new_cat: "New Category"
         add_new_title: "Adding a new category"
         create_cat: "Create Category"
+
+      category:
+        confirm: "Are you sure?"
+        update: "Update"
+        delete: "Delete"
+        edit: "Edit"
+        edit_cat: "Edit Category"
+        close: "Close"
