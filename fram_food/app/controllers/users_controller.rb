@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: :show
+  before_action :find_user, except: [:new, :create]
 
   def show
   end
@@ -12,23 +12,36 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       log_in @user
-      flash[:success] = t "controllers.users.welcome"
+      flash.now[:success] = t "controllers.users.welcome"
       redirect_to @user
     else
       render :new
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @user.update_attributes user_params
+      flash.now[:success] = t "controllers.users.profile_update"
+      redirect_to @user
+    else
+      flash.now[:danger] = t "controllers.users.error_update"
+      render :edit
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit :name, :email, :password,
-      :password_confirmation, :addres, :phone
+      :password_confirmation, :address, :phone
   end
 
   def find_user
     @user = User.find_by id: params[:id]
     unless @user
-      flash[:danger] = t "controllers.users.not_found"
+      flash.now[:danger] = t "controllers.users.not_found"
       redirect_to root_path
     end
   end
