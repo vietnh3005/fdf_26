@@ -121,3 +121,15 @@ en:
         edit: "Edit"
         edit_cat: "Edit Category"
         close: "Close"
+
+    products:
+      index:
+        new: "New"
+        product: "Product"
+
+      form:
+        save: "Save"
+        new_p: "Adding new product"
+        sel: "Select One"
+        food: "Food"
+        drink: "Drink"

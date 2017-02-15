@@ -49,7 +49,7 @@ h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
   font-weight: normal;
   color: $gray-light;
 }
@@ -155,8 +155,9 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
 /* Login */
-.modal-header, h4, .close {
+.modal-header1, h4, .close {
   padding:35px 50px;
   background-color: #5cb85c;
   color:white !important;

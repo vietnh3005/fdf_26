@@ -1,0 +1,39 @@
+<div class="modal fade" id="new">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><%= t ".new_p" %></h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for [:admins, @product], html: {multipart: true} do |f| %>
+          <%= render "shared/error_messages", target: @product, object: f.object %>
+
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "form-control" %>
+
+          <%= f.label :price %>
+          <%= f.text_field :price, class: "form-control"%>
+
+          <%= f.label :classify %>
+          <%= f.select :classify, Product.classify_types.keys , class: "form-control" %>
+
+          <%= f.label :category %>
+          <%= f.select :category_id, @supports.categories.collect{|key| [key.name, key.id]},
+            class: "form-control" %>
+
+          <%= f.label :image %>
+          <%= f.file_field :image, class: "upload-image"  %>
+
+          <%= f.submit t(".save"), class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <br></br>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          <%= t ".close" %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
