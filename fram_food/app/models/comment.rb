@@ -1,4 +1,8 @@
 class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :product
+  scope :order_by_time, -> {order created_at: :desc}
+  validates :user_id, presence: true
+  validates :product_id, presence: true
+  validates :content, presence: true, length: {maximum: 500}
 end
