@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20170210022121) do
     t.integer  "unit_quantity"
     t.float    "unit_price"
     t.integer  "id_discount"
+    t.float    "total_price"
     t.integer  "order_id"
     t.integer  "product_id"
     t.datetime "created_at",    null: false
@@ -66,17 +67,20 @@ ActiveRecord::Schema.define(version: 20170210022121) do
 
   create_table "orders", force: :cascade do |t|
     t.float    "total"
+    t.float    "subtotal"
     t.integer  "status"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "order_status_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["order_status_id"], name: "index_orders_on_order_status_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.float    "price"
-    t.boolean  "available"
+    t.boolean  "active"
     t.float    "rate"
     t.string   "image"
     t.string   "classify"

@@ -4,9 +4,9 @@ class CreateOrderDetails < ActiveRecord::Migration[5.0]
       t.integer :unit_quantity
       t.float :unit_price
       t.integer :id_discount
+      t.float :total_price
       t.references :order, foreign_key: true
       t.references :product, foreign_key: true
-
       t.timestamps
     end
   end
