@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :find_user, except: [:new, :create]
+  before_action :correct_user, only: [:edit, :update]
 
   def show
   end
@@ -44,5 +45,9 @@ class UsersController < ApplicationController
       flash.now[:danger] = t "controllers.users.not_found"
       redirect_to root_path
     end
+  end
+
+  def correct_user
+    redirect_to root_url unless current_user.current_user? @user
   end
 end

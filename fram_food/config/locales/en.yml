@@ -21,6 +21,13 @@
 
 en:
   comment: "Comment"
+  food: "Food"
+  drink: "Drink"
+  hot: "Hot"
+  new: "New"
+  all: "All"
+  previous: "Previous"
+  next: "Next"
   main_food: "food.jpg"
   base_title: "Welcome to Framfood"
   home_title: "Home"
@@ -48,11 +55,12 @@ en:
 
     header:
       login: "Login"
-      logo: "Logo"
+      logo: "FramFood"
       logout: "Logout"
       setting: "Settings"
       profile: "Profile"
       account: "Account"
+      cart: "Cart"
 
     leftbar:
       dashboard: "Dashboard"
@@ -89,6 +97,8 @@ en:
       suggest: "Suggest Admin"
 
   controllers:
+    products:
+      not_exist: "Don't have products"
     users:
       welcome: "Welcome to the Sample App!"
       not_found: "Don't have user"

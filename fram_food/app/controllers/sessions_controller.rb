@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
   def new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
@@ -9,8 +12,8 @@ class SessionsController < ApplicationController
       params[:session][:remember_me] == "1" ? remember(user) : forget(user)
       redirect_to root_path
     else
-      flash.now[:danger] = t "controllers.sessions.invalid"
-      render :new
+      flash[:danger] = t "controllers.sessions.invalid"
+      redirect_to root_path
     end
   end
 
