@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :find_by, only: :show
+  before_action :find_product, only: :show
   def index
     @products = Product.all
   end
@@ -14,10 +14,10 @@ class ProductsController < ApplicationController
       :classify, :category_id
   end
 
-  def find_products
+  def find_product
     @product = Product.find_by id: params[:id]
-    unless @products
-      flash.now[:danger] = t "controllers.users.not_found"
+    unless @product
+      flash[:danger] = t "controllers.products.not_exist"
       redirect_to root_path
     end
   end
