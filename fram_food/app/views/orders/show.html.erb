@@ -1,0 +1,18 @@
+<table>
+  <br>
+  <tr>
+    <th><%= t ".name"%></th><br>
+    <th><%= t ".quanity"%></th><br>
+    <th><%= t ".unit_price"%></th><br>
+    <th></th>
+  </tr>
+  <%= render @order_details %>
+</table>
+<span class="pirce">
+  <%= t ".total" %><%= number_to_currency current_order[:total_pay] %>
+</span>
+<%= link_to t(".continue_order"), "#", class: "btn btn-primary" %>
+<%= form_for @order do |f| %>
+  <%= f.submit t(".buy"), class: "btn btn-primary" %>
+  <%= f.hidden_field :status, value: "ordered" %>
+<% end %>

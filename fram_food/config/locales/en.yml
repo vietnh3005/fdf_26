@@ -54,6 +54,7 @@ en:
         date_month_year: "%d-%m-%y"
 
     header:
+      info: "(%{size} items)"
       login: "Login"
       logo: "FramFood"
       logout: "Logout"
@@ -68,6 +69,22 @@ en:
       manage_products: "Manage Products"
       manage_categories: "Manage Categories"
       manage_orders: "Manage Orders"
+
+  orders:
+    show:
+      continue_order: "Continue"
+      buy: "Direct delivery"
+      total: "Total: "
+
+  order_details:
+    order_detail:
+      edit_order_detail: "Edit"
+      delete_order_detail: "Delete"
+      confir_delete: "Delete products"
+    edit:
+      edit_title: "Edit"
+      edit_order: "Edit order"
+      edit_button: "Save"
 
   pages:
     home:
@@ -97,10 +114,15 @@ en:
       suggest: "Suggest Admin"
 
   controllers:
+    orders:
+      ordered: "Order success"
+      product_nil: "Product nil!"
+
     products:
       not_exist: "Don't have products"
       update_success: "Product info updated"
       update_fail: "Fail,please try again"
+      
     users:
       welcome: "Welcome to the Sample App!"
       not_found: "Don't have user"

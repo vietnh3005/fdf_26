@@ -1,0 +1,16 @@
+<tr>
+  <td><%= order_detail.product.name %></td>
+  <td><%= order_detail.unit_quantity %></td>
+  <td><%= order_detail.unit_price %></td>
+  <td>
+    <% if current_user.current_user? @order.user %>
+      <%= link_to t(".edit_order_detail"), edit_order_detail_path(order_detail),
+        class: "btn btn-primary" %>
+      <%= link_to t(".delete_order_detail"), order_detail_path(order_detail),
+        method: :delete,
+        class: "btn btn-danger",
+        data: {confirm: t(".confir_delete")} %>
+    <% end %>
+  </td>
+</tr>
+<div class="clearfix"></div>
