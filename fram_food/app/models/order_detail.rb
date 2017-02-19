@@ -1,7 +1,6 @@
 class OrderDetail < ApplicationRecord
-  has_many :products, dependent: :destroy
+  belongs_to :product
+  belongs_to :order
 
   has_one :discount
-
-  belongs_to :order
 end

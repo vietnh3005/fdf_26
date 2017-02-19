@@ -10,13 +10,20 @@
       <div><h5><%= t "product.category" %><%= @product.category.name %></h5></div>
       <div><h5><%= t "product.classify" %><%= @product.classify %></h5></div>
       <div><h5><%= t "product.rate" %><%= @product.rate %></h5></div>
+      <div>
+        <%= link_to cart_path(@product), remote: true,
+          method: "PUT", class: "btn btn-success" do %>
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            <%= t "cart.btn_cart" %>
+          <% end %>
+        </div>
     </div>
   </div>
 </div>
 <div class="comment">
-    <span class="leave"><%= t "views.books.shows.leave" %></span>
+  <span class="leave"><%= t "views.books.shows.leave" %></span>
     <% if logged_in? %>
       <%= render "comments/comment_form", current_user: current_user %>
     <% end %>
-    <%= render "comments/comment_list" %>
+  <%= render "comments/comment_list" %>
 </div>
