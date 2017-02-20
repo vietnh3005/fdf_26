@@ -20,9 +20,12 @@
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
           <li>
-            <%= link_to root_path do %>
-              <span class="glyphicon glyphicon-shopping-cart"></span>
-              <%= t".cart" %>
+            <% if current_order.id %>
+              <%= link_to order_path(current_order) do %>
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <%= t ".cart" %>
+                <%= t ".info", size: current_order.order_details.size %>
+              <% end %>
             <% end %>
           </li>
           <li class="dropdown">

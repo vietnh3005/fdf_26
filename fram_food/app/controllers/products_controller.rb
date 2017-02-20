@@ -1,16 +1,20 @@
 class ProductsController < ApplicationController
+  before_action :logged_in_user, only: [:show, :index]
   before_action :find_product, only: :show
+
   def index
+    @order_detail = current_order.order_details.new
     @products = Product.all
   end
-
+  
   def show
-    @comments = @product.comments.order_by_time
+    @order_detail = current_order.order_details.new
   end
+
 
   private
   def product_params
-    params.require(:product).permit :name, :price, :available, :rate, :image,
+    params.require(:product).permit :name, :price, :available, :image,
       :classify, :category_id
   end
 
