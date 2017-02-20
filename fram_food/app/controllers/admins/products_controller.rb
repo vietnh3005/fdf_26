@@ -13,6 +13,7 @@ class Admins::ProductsController < ApplicationController
   end
 
   def show
+    @supports = Supports::Product.new
   end
 
   def create
