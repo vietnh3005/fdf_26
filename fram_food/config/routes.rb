@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   namespace :admins do
     get "/admin_pages/*page", to: "admin_pages#show"
     resources :categories, except: [:new, :show]
-    resources :products, except: [:edit, :delete, :update]
+    resources :products
   end
 end
