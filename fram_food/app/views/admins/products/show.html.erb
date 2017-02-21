@@ -9,7 +9,6 @@
       <div><h4><%= @product.price %></h4></div>
       <div><h5><%= t "product.category" %><%= @product.category.name %></h5></div>
       <div><h5><%= t "product.classify" %><%= @product.classify %></h5></div>
-      <div><h5><%= t "product.rate" %><%= @product.rate %></h5></div>
       <%= link_to t(".edit"), edit_admins_product_path(), class: "btn btn-primary",
         data: {toggle: "modal", target: "#new"}, remote: true %>
       <%= render "form" %>

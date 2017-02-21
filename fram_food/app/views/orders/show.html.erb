@@ -14,5 +14,5 @@
 <%= link_to t(".continue_order"), "#", class: "btn btn-primary" %>
 <%= form_for @order do |f| %>
   <%= f.submit t(".buy"), class: "btn btn-primary" %>
-  <%= f.hidden_field :status, value: "ordered" %>
+  <%= f.hidden_field :status, value: "inprogress" %>
 <% end %>

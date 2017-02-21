@@ -1,0 +1,34 @@
+<% provide :title, t(".orders") %>
+
+<div class="containe col-md-9">
+  <h2><%= t ".order_list" %></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= t ".id" %></th>
+        <th><%= t ".owner" %></th>
+        <th><%= t ".status" %></th>
+        <th><%= t ".total_pay" %></th>
+        <th><%= t ".created_at" %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @orders.each do |order| %>
+        <tr>
+          <td><%= order.id %></td>
+          <td><%= order.user.name %></td>
+          <td><%= order.status %></td>
+          <td><%= number_to_currency order.total_pay %></td>
+          <td><%= order.created_at %></td>
+          <td>
+            <%= form_for [:admins, order], html: {multipart: true}, remote: true do |f| %>
+              <%= f.select :status, @order_status %>
+              <%= f.submit t(".save"), class: "btn btn-primary" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
