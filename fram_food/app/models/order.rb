@@ -7,6 +7,7 @@ class Order < ApplicationRecord
   before_create :init_order
   before_save :update_subtotal
 
+  enum status: [:inprogress, :rejected, :approved]
   def subtotal
     order_details.collect {|od| od.valid? ? (od.unit_quantity * od.unit_price) : Settings.zero}.sum
   end

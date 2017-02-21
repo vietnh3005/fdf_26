@@ -114,6 +114,10 @@ en:
       suggest: "Suggest Admin"
 
   controllers:
+    admins:
+      update_success: "Update successfully"
+      not_found: "Order not found"
+
     orders:
       ordered: "Order success"
       product_nil: "Product nil!"
@@ -122,7 +126,7 @@ en:
       not_exist: "Don't have products"
       update_success: "Product info updated"
       update_fail: "Fail,please try again"
-      
+
     users:
       welcome: "Welcome to the Sample App!"
       not_found: "Don't have user"
@@ -173,3 +177,23 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+
+    orders:
+      index:
+        order_list: "Order List"
+        id: "Order ID"
+        owner: "Owner"
+        status: "Status"
+        total: "Total"
+        created_at: "Created At"
+        save: "Change"
+        orders: "Manage orders"
+
+    users:
+      index:
+        users: "User"
+        id: "ID"
+        address: "Address"
+        phone: "Phone"
+        email: "Email"
+        delete: "Delete"
