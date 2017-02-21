@@ -17,10 +17,7 @@ class Admins::OrdersController < ApplicationController
   def update
     if @order.update_attributes order_params
       flash.now[:success] = t ".update_success"
-      respond_to do |format|
-        format.html {redirect_to admins_orders_path}
-        format.js {render layout: false}
-      end
+      redirect_to admins_orders_path
     else
       flash.now[:danger] = t ".update_fail"
     end
