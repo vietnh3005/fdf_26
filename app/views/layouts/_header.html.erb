@@ -1,6 +1,7 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to t(".logo"), root_path, id: "logo" %>
+
     <ul class="nav navbar-nav">
       <li class="dropdown">
         <%= link_to "#", class: "dropdown-toggle",
@@ -15,6 +16,7 @@
       </li>
       <li><%= link_to t(".hot"), "#section2" %></li>
       <li><%= link_to t(".new"), "#section3" %></li>
+      <li><%= link_to t(".product",), products_path %></li>
     </ul>
     <nav>
       <ul class="nav navbar-nav navbar-right">
@@ -33,7 +35,7 @@
               data: {toggle: "dropdown"} do %>
               <span class="glyphicon glyphicon-user"></span>
               <b class="caret"></b>
-              <%= t "admin" %>
+              <%= current_user.name %>
             <% end %>
             <ul class="dropdown-menu">
               <li>

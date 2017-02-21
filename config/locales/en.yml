@@ -91,6 +91,15 @@ en:
       welcome: "Welcome to Framgia"
       short_des: "This is homepage"
 
+  products:
+    product:
+      name: "Name: "
+      description: "Description "
+      price: "Price "
+      order_btn: "Order!!!"
+    index:
+      product: "Product"
+
   sessions:
     new:
       login: "Login"
