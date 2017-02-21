@@ -113,6 +113,13 @@ en:
       summary: "My Summary"
       suggest: "Suggest Admin"
 
+  products:
+    product:
+      name: "Name: "
+      description: "Description: "
+      price: "Price: "
+      button: "Order!!"
+
   controllers:
     admins:
       update_success: "Update successfully"

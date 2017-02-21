@@ -2,6 +2,7 @@
   <div class="container">
     <%= link_to t(".logo"), root_path, id: "logo" %>
     <ul class="nav navbar-nav">
+    <li><%= link_to t(".products",), products_path %></li>
       <li class="dropdown">
         <%= link_to "#", class: "dropdown-toggle",
           data: {toggle: "dropdown"} do %>
@@ -33,7 +34,7 @@
               data: {toggle: "dropdown"} do %>
               <span class="glyphicon glyphicon-user"></span>
               <b class="caret"></b>
-              <%= t "admin" %>
+              <%= current_user.name %>
             <% end %>
             <ul class="dropdown-menu">
               <li>
