@@ -4,8 +4,8 @@ class Admins::UsersController < ApplicationController
   before_action :find_user, only: [:destroy]
 
   def index
-    @user = User.new
     @users = User.all
+    @users = User.paginate page: params[:page], per_page: Settings.five
   end
 
   def destroy
