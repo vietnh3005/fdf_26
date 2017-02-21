@@ -4,8 +4,8 @@ class Admins::OrdersController < ApplicationController
   before_action :find_order, only: [:update, :show]
 
   def index
-    @orders = Order.all
     @order_status = Order.statuses.keys
+    @orders = Order.paginate page: params[:page], per_page: Settings.five
   end
 
   def show

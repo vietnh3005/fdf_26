@@ -10,7 +10,11 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-      redirect_to root_path
+      if current_user.is_admin?
+        redirect_to admins_products_path
+      else
+        redirect_to root_path
+      end
     else
       flash[:danger] = t "controllers.sessions.invalid"
       redirect_to root_path

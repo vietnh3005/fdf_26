@@ -2,9 +2,10 @@ class Admins::CategoriesController < ApplicationController
   layout "admin_layout"
   before_action :logged_in_user, :verify_admin
   before_action :load_category, only: [:update, :destroy]
+
   def index
-    @categories = Category.all
     @category = Category.new
+    @categories = Category.paginate page: params[:page], per_page: Settings.five
   end
 
   def create
