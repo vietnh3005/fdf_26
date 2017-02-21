@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     get "/admin_pages/*page", to: "admin_pages#show"
     resources :categories, except: [:new, :show]
     resources :products
+    resources :orders, only: [:update]
   end
 end
